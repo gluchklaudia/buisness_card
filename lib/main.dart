@@ -27,15 +27,31 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red[200],
+      backgroundColor: Colors.cyan[100],
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 140),
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 95,
+                backgroundColor: Colors.blueGrey[300],
+                child: CircleAvatar(
+                  radius: 90,
+                  backgroundImage:
+                      AssetImage('assets/images/profile_photo.jpg'),
+                ),
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Klaudia Głuch',
+                style: TextStyle(
+                    color: Colors.grey[800],
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40),
+              ),
+            ],
+          ),
         ),
       ),
     );
