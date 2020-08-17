@@ -19,6 +19,10 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
+  fonts:
+    - family: Lobster
+      fonts:
+        - asset: assets/fonts/Lobster-Regular.ttf
   assets:     
     - assets/images/profile_photo.jpg
   uses-material-design: true

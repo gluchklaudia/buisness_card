@@ -46,9 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
               Text(
                 'Klaudia Głuch',
                 style: TextStyle(
-                    color: Colors.grey[800],
-                    fontWeight: FontWeight.bold,
-                    fontSize: 40),
+                  fontFamily: 'Lobster',
+                  color: Colors.grey[800],
+                  fontSize: 40,
+                ),
               ),
             ],
           ),
