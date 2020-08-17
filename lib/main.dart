@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +27,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return Scaffold(
       backgroundColor: Colors.cyan[100],
       body: Center(
@@ -51,6 +56,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontSize: 40,
                 ),
               ),
+              SizedBox(height: 20),
+              Container(
+                height: 60.0,
+                width: 250.0,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  border: Border.all(width: 5.0, color: Colors.white),
+                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                  color: Colors.white, //remove color to make it transpatent
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('blabla'),
+                  ],
+                ),
+              )
             ],
           ),
         ),
